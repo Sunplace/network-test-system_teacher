@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+  <title>addquestion</title>
+</head>
+<body>
+  <h1>试题添加</h1>
+  <p>请根据要求填写待添加试题的信息。</p>
+  <form action='addquestion' method='post'>
+    试题类型：<input id='selection' type='radio' name='questionType' value='selection'>
+    <label for='selection'>选择题</label>
+    <input id='fill_blank' type='radio' name='questionType' value='fill_blank'>
+    <label for='fill_blank'>填空题</label>
+    <input id='jianda' type='radio' name='questionType' value='jianda'>
+    <label for='jianda'>简答题</label>
+    <br />
+    <textarea name='questionFile' cols='80' rows='20'>问题描述。。。</textarea><br />
+    <button  onclick="if(confirm('确认添加此问题？')==true){return true;}else{return false;}" >提交添加</button>
+  </form>
+  <!-- <script src='/javascripts/confirm.js' type='text/javascript'></script> -->
+</body>
+</html>

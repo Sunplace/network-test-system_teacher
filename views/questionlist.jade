@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to QuestionList
+  -for(var i in #{questionlist})
+  -var i
+   each i in #{questionlist}
+  li = questionFile

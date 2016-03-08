@@ -1,0 +1,27 @@
+<!doctype html>
+<head>
+  <title>paper's scores</title>
+</head>
+<body>
+  <h1>试卷成绩</h1>
+  <p>
+    <ul>
+      <li><a href='/'>主页</a></li>
+    </ul>
+  </p>
+  <fieldset>
+    <legend>详情</legend>
+    <p>
+      试卷名称: <%=paper.paperName%><br />
+      命题人: <%=paper.paperMaker%><br />
+    </p>
+    <p>
+      <ul>
+        <% scores.forEach(function(student){%>
+          <li>姓名: <%=student.name%>&nbsp;&nbsp;分数: <%=student.score%></li>
+        <%})%>
+      </ul>
+    </p>
+  </fieldset>
+</body>
+</html>

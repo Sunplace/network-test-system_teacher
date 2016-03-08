@@ -1,0 +1,23 @@
+<!doctype html>
+<head>
+  <title>paper's list</title>
+</head>
+<body>
+  <h1>试卷管理</h1>
+  <p>
+    <ul>
+      <li><a href='/'>主页</a></li>
+    </ul>
+  </p>
+  <fieldset>
+    <legend>可用试卷</legend>
+    <p>
+      <ul>
+        <% papers.forEach(function(paper){%>
+          <li>试卷名称: <a href='/paper/details?paperNum=<%=paper.paperNum%>'><%=paper.paperName%></a>&nbsp;&nbsp;命题人: <%=paper.paperMaker%></li>
+        <%})%>
+      </ul>
+    </p>
+  </fieldset>
+</body>
+</html>

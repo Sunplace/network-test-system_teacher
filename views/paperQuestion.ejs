@@ -1,0 +1,41 @@
+<!doctype html>
+<head>
+  <title>paper's question list</title>
+</head>
+<body>
+  <h1>试卷问题列表</h1>
+  <p>
+    <ul>
+      <li><a href='/'>主页</a></li>
+    </ul>
+  </p>
+  <h2>试卷名称:<%=paperName%></h2>
+  <% var i=1%>
+  <% paperQuestions.forEach(function(question){%>
+  <fieldset>
+    <legend>问题 <%=i%></legend>
+  <%i++%>
+  <p>问题类型:
+<%    var type  %>
+<%    if(question.questionType == 'selection' ){  %>
+<%    type='选择题'    %>
+<%    } %>
+<%    if(question.questionType == 'fill_blank'){%>
+<%    type='填空题'  %>
+<%    } %>
+<%    if(question.questionType == 'jianda'){%>
+<%    type='简答题'%>
+<%    } %>
+
+  <%=type%><br />
+</p>
+  <p><em>问题描述：</em></p>
+  <p>&nbsp;&nbsp;&nbsp;
+    <pre>
+    <%=questionsFile[i-2]%>
+  </pre>
+  </p>
+</fieldset>
+  <%})%>
+</body>
+</html>

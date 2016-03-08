@@ -1,0 +1,33 @@
+<!doctype html>
+<head>
+  <title>score query</title>
+</head>
+<body>
+<h1>试卷分数查询</h1>
+<p>
+  <ul>
+    <li><a href='/'>主页</a></li>
+  </ul>
+</p>
+<fieldset>
+  <legend>查询单个学生成绩</legend>
+  <p>
+    <ul>
+      <% students.forEach(function(student){%>
+      <li><a href='/score/details?studentId=<%=student.id%>'><%=student.name%></a></li>
+    <%})%>
+  </ul>
+</p>
+</fieldset>
+<fieldset>
+  <legend>查询某次试卷成绩</legend>
+    <p>
+      <ul>
+        <% papers.forEach(function(paper){%>
+          <li><a href='/score/details?paperNum=<%=paper.paperNum%>'><%=paper.paperName%></a></li>
+        <%})%>
+      </ul>
+    </p>
+  </fieldset>
+</body>
+<html>

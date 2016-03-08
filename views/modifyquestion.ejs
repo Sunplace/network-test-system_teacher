@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<head>
+  <title>modifyquestion</title>
+</head>
+<body>
+  <h1>试题修改</h1>
+  <form method='post' action='modifyquestion'>
+    <p>修改完成后提交即可</p>
+    <textarea name='questionFile' cols='80' rows='20'>
+      <%=data%>
+    </textarea><br />
+    <button name='questionID' value='<%=id%>' onclick="if(confirm('确认修改问题？')==true){return true;}else{return false;}" >提交修改</button>
+  </form>
